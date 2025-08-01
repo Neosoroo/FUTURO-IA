@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --cor-fundo: #0d0d1a;
+  --cor-bloco: #1c1c3b;
+  --cor-botao: #2BDEFD;
+  --cor-hover: #1ac5e0;
+  --cor-texto: #e3f6ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.tela {
+  width: 100%;
+  max-width: 700px;
+}
+
+.tela-bloco {
+  background: var(--cor-bloco);
+  padding: 40px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(43, 222, 253, 0.1);
+  text-align: center;
+
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.tela-bloco:target {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+h1, h2 {
+  font-family: 'Chakra Petch', sans-serif;
+  color: var(--cor-botao);
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--cor-botao);
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 10px;
+  margin: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.botao:hover {
+  background: var(--cor-hover);
+}
+
+.voltar {
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid var(--cor-botao);
+  color: var(--cor-botao);
+}
+
+.voltar:hover {
+  background: var(--cor-botao);
+  color: #000;
+}
